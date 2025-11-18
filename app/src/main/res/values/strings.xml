@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">My - ExpenseTracker</string>
+    <string name="total_pengeluaran">Total Pengeluaran</string>
+    <string name="rp_0">Rp 0</string>
+    <string name="tambah_pengeluaran">Tambah Pengeluaran</string>
+    <string name="edit_pengeluaran">Edit Pengeluaran</string>
+    <string name="nama_transaksi">Nama Transaksi</string>
+    <string name="nominal_rp">Nominal (Rp)</string>
+    <string name="kategori">Kategori</string>
+    <string name="tanggal_transaksi">Tanggal Transaksi (DD-MM-YYYY)</string>
+    <string name="simpan">Simpan</string>
+    <string name="hapus_item">Hapus Item</string>
+    <string name="yakin_hapus">Apakah Anda yakin ingin menghapus item ini?</string>
+    <string name="ya">Ya</string>
+    <string name="tidak">Tidak</string>
+    <string name="tambah">Tambah</string>
+
+    <string-array name="expense_categories">
+        <item>Makanan</item>
+        <item>Transportasi</item>
+        <item>Hiburan</item>
+        <item>Belanja</item>
+        <item>Tagihan</item>
+        <item>Kesehatan</item>
+        <item>Pendidikan</item>
+        <item>Lainnya</item>
+    </string-array>
+</resources>

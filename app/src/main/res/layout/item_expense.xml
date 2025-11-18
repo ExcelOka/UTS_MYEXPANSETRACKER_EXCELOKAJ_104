@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Hiasan Garis Vertikal di Kiri -->
+        <View
+            android:id="@+id/vertical_line"
+            android:layout_width="6dp"
+            android:layout_height="0dp"
+            android:background="@color/beige_500"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Nama Transaksi -->
+        <TextView
+            android:id="@+id/tvTransactionName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/options_layout"
+            app:layout_constraintStart_toEndOf="@id/vertical_line"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Beli Makan Siang Padang" />
+
+        <!-- Nominal Pengeluaran -->
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/vertical_line"
+            app:layout_constraintTop_toBottomOf="@id/tvTransactionName"
+            tools:text="Rp 25.000" />
+
+        <!-- Garis Pemisah Tipis -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="#14000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/vertical_line"
+            app:layout_constraintTop_toBottomOf="@id/tvAmount" />
+
+        <!-- Detail Kategori dengan Ikon -->
+        <ImageView
+            android:id="@+id/ivCategory"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/ic_category"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/vertical_line"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:tint="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="@id/ivCategory"
+            app:layout_constraintStart_toEndOf="@id/ivCategory"
+            app:layout_constraintTop_toTopOf="@id/ivCategory"
+            tools:text="Makanan" />
+
+        <!-- Detail Tanggal dengan Ikon -->
+        <ImageView
+            android:id="@+id/ivDate"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/ic_date"
+            app:layout_constraintBottom_toBottomOf="@id/ivCategory"
+            app:layout_constraintStart_toEndOf="@id/tvCategory"
+            app:layout_constraintTop_toTopOf="@id/ivCategory"
+            app:tint="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="@id/ivDate"
+            app:layout_constraintStart_toEndOf="@id/ivDate"
+            app:layout_constraintTop_toTopOf="@id/ivDate"
+            tools:text="10-11-2025" />
+
+        <!-- Tombol Edit dan Hapus -->
+        <LinearLayout
+            android:id="@+id/options_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnEdit"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_edit_outline"
+                app:tint="@color/beige_500" />
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_delete_outline"
+                app:tint="@color/beige_500" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
